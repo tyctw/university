@@ -11,6 +11,7 @@ import PortfolioGuide from './PortfolioGuide';
 import AboutUs from './AboutUs';
 import PrivacyPolicy from './PrivacyPolicy';
 import Disclaimer from './Disclaimer';
+import AdSenseAd from './AdSenseAd';
 
 import VisualMap from './VisualMap';
 import PathCard from './PathCard';
@@ -754,6 +755,8 @@ export default function App() {
           </div>
         </section>
 
+        <AdSenseAd className="min-h-[90px]" />
+
         {/* Dashboard Section */}
         <section id="dashboard" className="scroll-mt-32">
           <div className="flex items-center gap-4 mb-8">
@@ -905,6 +908,8 @@ export default function App() {
                <ArrowRightLeft className="w-4 h-4" />
                <span>管道超級比一比</span>
             </button>
+
+            <AdSenseAd className="min-h-[90px]" />
 
             <div className="grid lg:grid-cols-2 gap-6">
               {activePaths.map((path, index) => (
