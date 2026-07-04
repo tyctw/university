@@ -7,6 +7,7 @@ declare global {
 }
 
 const ADSENSE_CLIENT = 'ca-pub-6966991656561179';
+const DEFAULT_ADSENSE_SLOT = '3166266148';
 const env = (import.meta as unknown as { env?: Record<string, string | undefined> }).env || {};
 
 interface AdSenseAdProps {
@@ -22,7 +23,7 @@ export default function AdSenseAd({
   format = 'auto',
   fullWidthResponsive = true,
 }: AdSenseAdProps) {
-  const adSlot = slot || env.VITE_ADSENSE_SLOT;
+  const adSlot = slot || env.VITE_ADSENSE_SLOT || DEFAULT_ADSENSE_SLOT;
 
   useEffect(() => {
     if (!adSlot || typeof window === 'undefined') return;
